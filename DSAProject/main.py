@@ -25,12 +25,13 @@ myLocation.create(locationHash, 'WGUPSDistanceTable.csv')
 
 
 
-distanceHash.search(2)
+print(packageHash.search(1))
+print(packageHash.search(2))
+print(packageHash.search(3))
 
-
-print(packageHash.table)
-print(distanceHash.table)
-print(locationHash.table)
+#print(packageHash.table)
+#print(distanceHash.table)
+#print(locationHash.table)
 
 
 #while i < 27:

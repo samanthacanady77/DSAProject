@@ -16,9 +16,8 @@ class package:
         self.status = status
 
     def __str__(self):
-        return "%s, %s, %s, %s, %s, %s, %s, %s, %s" % \
-               (self.id, self.address, self.city, self.state, self.zipcode, self.deadline, self.weight, self.notes,
-                self.status)
+        return "*** ((Package ID#: %s)):\n** %s, %s, %s,  %s\n* %skg \t| Deadline: %-15s \t| Status: %-15s \t| Notes: %s\n " % \
+               (self.id, self.address, self.city, self.state, self.zipcode, self.weight, self.deadline, self.status, self.notes,)
 
     def create(self, packageHash, inputfile):
         with open(inputfile) as packagefile:
