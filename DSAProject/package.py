@@ -20,7 +20,7 @@ class package:
                (self.id, self.address, self.city, self.state, self.zipcode, self.deadline, self.weight, self.notes,
                 self.status)
 
-    def create(self, myHash, inputfile):
+    def create(self, packageHash, inputfile):
         with open(inputfile) as packagefile:
             packageData = csv.reader(packagefile, delimiter=",")
 
@@ -37,6 +37,6 @@ class package:
 
                 packageObj = package(pId, pAddress, pCity, pState, pZipcode, pDeadline, pWeight, pNote, pStatus)
 
-                myHash.insert(pId, packageObj)
+                packageHash.insert(pId, packageObj)
 
 
