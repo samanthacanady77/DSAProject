@@ -1,8 +1,9 @@
 #E Develop a hash table, without using any additional libraries or classes, that has an insertion function
-
+# Ref: zyBooks: Figure 7.8.2: Hash table using chaining.
 #Chaining hash table
-class hashtable:
-    def __init__(self, initial_capacity=100):
+class Hashtable:
+    #make some sort of counter that gets all the data from the csv and createes a hashtable of the correct size, altered table's size temporarily
+    def __init__(self, initial_capacity=50):
         # initialize the hash table with empty bucket list entries.
         self.table = []
         for i in range(initial_capacity):
@@ -38,7 +39,6 @@ class hashtable:
             # print (key_value)
             if kv[0] == key:
                 return kv[1]  # value
-        print("Item not found")
         return None
 
     # Removes an item with matching key from the hash table.

@@ -1,41 +1,53 @@
 # C1.  Create an identifying comment within the first line of a file named “main.py” that includes your first name,
 # last name, and student ID.
 # Samantha Canady, 001383829
-import self as self
 
-from hashtable import hashtable
-from distance import distance
-from location import location
-from package import package
 
-packageHash = hashtable()
-distanceHash = hashtable()
-locationHash = hashtable()
+from hashtable import Hashtable
+from distance import Distance
+from address import Address
+from package import Package
 
-myPackage = package(0, "", "", "", "", "", "", "", "")
+
+packageHash = Hashtable()
+distanceHash = Hashtable()
+distanceList = list()
+addressList = list()
+
+locationHash = Hashtable()
+
+myPackage = Package(0, "", "", "", "", "", "", "", "")
 myPackage.create(packageHash, 'WGUPSPackageFile.csv')
 
-myDistance = distance(0, "Western Governors University 4001 South 700 East, Salt Lake City, UT 84107", 'HUB', '0.0', '', '',
-                      '', '', '', '', '', '', '', '', '', '', '', '',
-                      '', '', '', '', '', '', '', '', '', '', '', '')
-myDistance.create(distanceHash, 'WGUPSDistanceTable.csv')
-
-myLocation = location(0, 'WGU')
-myLocation.create(locationHash, 'WGUPSDistanceTable.csv')
+myAddress = Address("asdfsdaf")
 
 
+myDistance = Distance(0, "Westty, UT 84107", 'HUB', '0.0', '',
+                      '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',"")
+i = 0
 
-print(packageHash.search(1))
-print(packageHash.search(2))
-print(packageHash.search(3))
+myDistance.create(distanceList, 'WGUPSDistanceTable.csv')
 
-#print(packageHash.table)
-#print(distanceHash.table)
-#print(locationHash.table)
+myAddress.create(addressList, 'address.csv')
 
 
+#prints the distance matrix
 #while i < 27:
-    #print(locationHash.search(i))
+    #print(print(distanceList[i]))
     #i += 1
+
+#print(distanceList[0][2])
+
+print(addressList)
+
+
+# print(packageHash.table)
+# print(distanceHash.table)
+# print(distanceList)
+# print(locationHash.table)
+
+#for i in range(len(distanceHash.table) + 1):
+    #print(i, (distanceHash.search(i)))
+
 
 
